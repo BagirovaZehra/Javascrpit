@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="modul.css">
+</head>
+<body>
+  <input type="text" name="" id="search" placeholder="search here...">
+  <br> <br>
+   <table border="1" width="50%" class="show">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>surname</th>
+            <th>age</th>
+            <th colspan="2" id="A">+</th>
+            
+        </tr>
+    </thead>
+    <tbody class="body">
+
+    </tbody>
+
+   </table>
+   <div id="modul" class="btn-danger">
+    <input type="text" class="input" placeholder="name" id="name" >
+    <input type="text" class="input" placeholder="surname" id="surname">
+    <input type="text" class="input" placeholder="age" id="age">
+    <br> <br>
+    <button id="add" >Add</button>
+    <button id="close">Close</button>
+   </div>
+   <script>
+    // modulun acilib baglanmasi
+    document.getElementById("A").addEventListener("click",function open() {
+        document.querySelector("#modul").style.display="block"
+    })
+    document.getElementById("close").addEventListener("click",function close() {
+        document.querySelector("#modul").style.display="none"
+    })
+    // add olunmasi
+    let add=document.querySelector('#add');
+    let close=document.querySelector('#close');
+    let modul=document.querySelector('#modul');
+    let name=document.querySelector("#name");
+    let surname=document.querySelector("#surname");
+    let age=document.querySelector("#age");
+    let table=document.querySelector(".body")
+    add.addEventListener('click',  ()=> {
+        let tr=document.createElement("tr");
+        tr.className="setir";
+        let td1=document.createElement("td");
+        td1.className="x";
+        td1.textContent=name.value;
+        let td2=document.createElement("td");
+        td2.textContent=surname.value;
+        let td3=document.createElement("td");
+        td3.textContent=age.value;
+        table.appendChild(tr);
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        let td4=document.createElement("td");
+        td4.textContent="x";
+        tr.appendChild(td4);
+        let td5=document.createElement("td");
+        td5.textContent="update";
+        tr.appendChild(td5)
+        td4.addEventListener("click", ()=>{
+            tr.remove();
+        })
+    })
+    // search kodu
+    document.querySelector("#search").addEventListener("input" , ()=>{
+        let searchInput=document.querySelector("#search");
+        let filter=searchInput.value.toLowerCase();
+        let tritem=document.querySelectorAll(".setir");
+        tritem.forEach((item) => {
+            let text=item.textContent;
+            if(text.toLowerCase().includes(filter.toLowerCase())){
+                item.style.display='';
+            }
+            else{
+                item.style.display='none';
+            }
+        });
+    })
+
+   </script>
+</body>
+</html>

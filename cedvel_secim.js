@@ -1,0 +1,175 @@
+let telebe=[
+    {
+        name:"Zehra",
+        surname:"Bagirova",
+        age:18,
+        group:695,
+        ixtisas:"Security"
+    },
+    {
+        name:"Zerife",
+        surname:"Zalova",
+        age:18,
+        group:693,
+        ixtisas:"Security"
+    },
+    {
+        name:"Fatime",
+        surname:"Musayeva",
+        age:18,
+        group:691,
+        ixtisas:"Security"
+    },
+    {
+        name:"Zehra",
+        surname:"Abbasova",
+        age:18,
+        group:697,
+        ixtisas:"Security"
+    },
+    {
+        name:"Fidan",
+        surname:"Valiyeva",
+        age:18,
+        group:591,
+        ixtisas:"IT"
+    },
+    {
+        name:"Zehra",
+        surname:"Bagirova",
+        age:18,
+        group:593,
+        ixtisas:"IT"
+    },
+    {
+        name:"Naile",
+        surname:"Bagirova",
+        age:18,
+        group:595,
+        ixtisas:"IT"
+    },
+    {
+        name:"Melek",
+        surname:"Zeynalov",
+        age:18,
+        group:597,
+        ixtisas:"IT"
+    },
+    {
+        name:"Zehra",
+        surname:"Bagirova",
+        age:18,
+        group:551,
+        ixtisas:"KM"
+    },
+    {
+        name:"Fidan",
+        surname:"Ceferli",
+        age:18,
+        group:553,
+        ixtisas:"KM"
+    },
+    {
+        name:"Ayten",
+        surname:"Seferova",
+        age:18,
+        group:555,
+        ixtisas:"KM"
+    },
+    {
+        name:"Zehra",
+        surname:"Bagirova",
+        age:18,
+        group:557,
+        ixtisas:"KM"
+    }
+]
+let faculty=[
+    {
+        ixtisas:"SECURITY",
+        group:691
+    },
+    {
+        ixtisas:"SECURITY",
+        group:693
+    },
+    {
+        ixtisas:"SECURITY",
+        group:695
+    },
+    {
+        ixtisas:"SECURITY",
+        group:697
+    },
+    {
+        ixtisas:"IT",
+        group:591
+    },
+    {
+        ixtisas:"IT",
+        group:593
+    },
+    {
+        ixtisas:"IT",
+        group:595
+    },
+    {
+        ixtisas:"IT",
+        group:597
+    },
+    {
+        ixtisas:"KM",
+        group:551
+    },
+    {
+        ixtisas:"KM",
+        group:553
+    },
+    {
+        ixtisas:"KM",
+        group:555
+    },
+    {
+        ixtisas:"KM",
+        group:557
+    }
+]
+let filter_data;
+dataixtisas(faculty)
+
+function dataixtisas(faculty) {
+    qrup.innerHTML=""
+    faculty.forEach(element => {
+        qrup.innerHTML+=`<li class="qrup">${element.group}</li>`
+      qrup.innerHTML.className="qrup"
+    });
+}
+
+data(telebe)
+function data(arr) {
+    body.innerHTML=""
+    arr.forEach(element => {
+        body.innerHTML+=`<tr>
+                <th>${element.name}</th>
+                <th>${element.surname}</th>
+                <th>${element.age}</th>
+            </tr>`
+    });
+    
+}
+let filter_data1;
+document.querySelectorAll(".ixtisas").forEach(item=>{
+    item.addEventListener("click", function (){
+       filter_data=faculty.filter(x=>x.ixtisas==this.innerText)
+        dataixtisas(filter_data)
+        document.querySelectorAll(".qrup").forEach(item=>{
+            item.addEventListener("click", function (){
+                
+                filter_data1=telebe.filter(x=>x.group==this.innerText)
+                console.log(filter_data1);
+                data(filter_data1)
+            })
+        })
+
+    })
+})

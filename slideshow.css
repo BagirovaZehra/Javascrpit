@@ -1,0 +1,29 @@
+.main{
+    margin: auto;
+    background-color: gray;
+    width: 700px;
+    height: 500px;
+    position: relative;
+}
+#previous{
+    margin-top: 230px;
+    font-size: 50px;
+}
+#next{
+    position: absolute;
+    font-size: 50px;
+    left: 670px;
+    top: 240px;
+   
+}
+.item{
+    width: 70px;
+    height: 10px;
+    background-color: gray;
+    display: inline-block;
+}
+.container{
+   position: absolute;
+   left: 230px;
+   top: 470px;
+}

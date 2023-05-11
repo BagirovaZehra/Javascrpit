@@ -1,0 +1,28 @@
+#modul{
+    display: none;
+    width: 500px;
+    height: 200px;
+    background-color: antiquewhite;
+    margin: auto;
+    position: relative;
+
+}
+.input{
+    margin: 2%;
+}
+#add{
+margin-left: 100px;
+margin-bottom: 10px;
+width: 100px;
+height: 50px;
+background-color: rgb(138, 52, 52);
+}
+#close{
+  margin-left: 250px;
+  width: 100px;
+height: 50px;
+position: absolute;
+left: 80px;
+}
+
+

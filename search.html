@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" name="" id="search" placeholder="search  here...">
+    <ul>
+        <li class="list">Java</li>
+        <li class="list">HTML</li>
+        <li class="list">Css</li>
+        <li class="list">Javascript</li>
+        <li class="list">C++</li>
+    </ul>
+    </div>
+    <script>
+        document.querySelector('#search').addEventListener('input' ,function filtertr() {
+            let searchInput=document.querySelector('#search');
+            let filter=searchInput.value.toLowerCase();
+            let listitem=document.querySelectorAll('.list');
+            listitem.forEach((item) => {
+                let text=item.textContent;
+                if (text.toLowerCase().includes(filter.toLowerCase())) {
+                    item.style.display='';
+                }
+                else{
+                    item.style.display='none';
+                }
+
+            });
+        })
+    </script>
+</body>
+</html>

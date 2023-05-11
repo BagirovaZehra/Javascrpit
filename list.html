@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="list.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <div class="main">
+        <ul>
+            <li class="A">Zehra
+               
+                <i class="fa-solid fa-caret-down fa-rotate-180" id="B1"></i><i class="fa-sharp fa-solid fa-caret-down" id="A1"></i>
+            </li>
+            <div class="yazi" id="yazi1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique cumque quibusdam dolores quas eius maiores in at mollitia harum perspiciatis molestias, veritatis qui, eligendi id voluptas error tenetur autem libero.</p></div>
+            <li class="A">Fidan
+                <i class="fa-solid fa-caret-down fa-rotate-180" id="B2"></i><i class="fa-sharp fa-solid fa-caret-down" id="A2"></i>
+            </li>
+            <div class="yazi" id="yazi2"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique cumque quibusdam dolores quas eius maiores in at mollitia harum perspiciatis molestias, veritatis qui, eligendi id voluptas error tenetur autem libero.</p></div>
+            <li class="A">Rena
+                <i class="fa-solid fa-caret-down fa-rotate-180" id="B3"></i><i class="fa-sharp fa-solid fa-caret-down" id="A3"></i>
+            </li>
+            <div class="yazi" id="yazi3"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique cumque quibusdam dolores quas eius maiores in at mollitia harum perspiciatis molestias, veritatis qui, eligendi id voluptas error tenetur autem libero.</p></div>
+
+            <li class="A">Fidan
+                <i class="fa-solid fa-caret-down fa-rotate-180" id="B4"></i><i class="fa-sharp fa-solid fa-caret-down" id="A4"></i>
+            </li>
+            <div class="yazi" id="yazi4"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique cumque quibusdam dolores quas eius maiores in at mollitia harum perspiciatis molestias, veritatis qui, eligendi id voluptas error tenetur autem libero.</p></div>
+
+        </ul>
+    </div>
+    <script>
+        document.querySelector("#B1").addEventListener("click", ()=>{
+            document.querySelector("#yazi1").style.display='block';
+            document.querySelector("#A1").style.display='block';
+            document.querySelector("#B1").style.display='none';
+    
+        })
+        document.querySelector("#B2").addEventListener("click", ()=>{
+            document.querySelector("#yazi2").style.display='block';
+            document.querySelector("#A2").style.display='block';
+            document.querySelector("#B2").style.display='none';
+    
+        })
+        document.querySelector("#B3").addEventListener("click", ()=>{
+            document.querySelector("#yazi3").style.display='block';
+            document.querySelector("#A3").style.display='block';
+            document.querySelector("#B3").style.display='none';
+    
+        })
+        document.querySelector("#B4").addEventListener("click", ()=>{
+            document.querySelector("#yazi4").style.display='block';
+            document.querySelector("#A4").style.display='block';
+            document.querySelector("#B4").style.display='none';
+    
+        })
+        document.querySelector("#A1").addEventListener("click", ()=>{
+            document.querySelector("#yazi1").style.display='none';
+            document.querySelector("#A1").style.display='none';
+            document.querySelector("#B1").style.display='block';
+
+        })
+        document.querySelector("#A2").addEventListener("click", ()=>{
+            document.querySelector("#yazi2").style.display='none';
+            document.querySelector("#A2").style.display='none';
+            document.querySelector("#B2").style.display='block';
+
+        })
+        document.querySelector("#A3").addEventListener("click", ()=>{
+            document.querySelector("#yazi3").style.display='none';
+            document.querySelector("#A3").style.display='none';
+            document.querySelector("#B3").style.display='block';
+
+        })
+        document.querySelector("#A4").addEventListener("click", ()=>{
+            document.querySelector("#yazi4").style.display='none';
+            document.querySelector("#A4").style.display='none';
+            document.querySelector("#B4").style.display='block';
+
+        })
+        
+       
+    </script>
+</body>
+</html>

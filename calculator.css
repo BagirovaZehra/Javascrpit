@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 670px;
+    background-color: black;    
+}
+input{
+    width: 70px;
+    height: 70px;
+    border-radius: 50% ;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    
+}
+#display{
+    width: 287px;
+    border-radius: 0;
+    text-align: right;
+    flex: 1;
+    box-shadow: none;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+#box{
+    width: 144px;
+    border-radius: 27px;
+}
+.item{
+    margin: 5px;
+}
+input.gray{
+    background-color: gray;
+    color: black;
+}
+input.yellow{
+    background-color: orange;
+    color: white;
+}
+input.dgray{
+    background-color: rgb(35, 49, 49);
+    color: white;
+}
+    
+

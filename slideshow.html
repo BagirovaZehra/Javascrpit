@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="slideshow.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="main">
+        <i class="fa-solid fa-chevron-left" id="previous"><</i>
+        <i class="fa-solid fa-chevron-right" id="next">></i>
+        <div class="container">
+            <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        </div>
+       
+    </div>
+    <script>
+        let main=document.querySelector(".main");
+        let previous=document.querySelector("#previous");
+        let next=document.querySelector("#next");
+        let body=document.querySelector("body");
+        let container=document.querySelector(".container");
+        // let sekil=["url(https://marigold.az/uploads/5efe4cb269942c4964e2cc270ea9c321-202206181655536003.webp)", "url(https://www.marigold.az/uploads/31d46a01519b698749b2c7c74493aa28-202206181655536004.webp)", "url(https://agciceyim.az/data/catalog/product/260/621_lg.jpg)"];
+        let sekil=["url(images1.webp)", "url(images2.webp)" , "url(images3.png)"];
+        let index=0;
+        let i=1;
+        main.style.backgroundImage=sekil[index];
+        document.querySelectorAll(".item")[0].style.backgroundColor='white';
+        main.style.backgroundSize='cover';
+       next.addEventListener("click", ()=>{
+         if(index<sekil.length-1){
+            index++;
+
+         }
+         else if(index==sekil.length-1){
+            index=0
+         }
+         main.style.backgroundImage=sekil[index];
+
+         for(let j=0;j<=sekil.length-1;j++){
+            document.querySelectorAll(".item")[j].style.backgroundColor='gray';
+
+         }
+        
+        document.querySelectorAll(".item")[index].style.backgroundColor='white';
+      })
+      
+       previous.addEventListener("click",()=>{
+        
+          if(index==0){
+            index=sekil.length-1;
+         }
+         else if(index<=sekil.length-1){
+            index--;
+
+         }
+         main.style.backgroundImage=sekil[index];
+
+         for(let j=0;j<=sekil.length-1;j++){
+            document.querySelectorAll(".item")[j].style.backgroundColor='gray';
+
+         }
+        
+        document.querySelectorAll(".item")[index].style.backgroundColor='white';
+
+       })
+
+       
+     </script>
+</body>
+</html>
